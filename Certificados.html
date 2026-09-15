@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curriculo/Portifolio</title>
+
+        <link rel="stylesheet" href="Styles/StylesCertificado.css">
+    </head>
+
+    <body>
+
+        <header>
+            <a href="Index.html" class="logo">Seu nome</a>
+
+            <nav>
+                <a href="Projetos.html">Projetos</a>
+                <a href="Skills.html">Skills</a>
+                <a href="#">Certificados</a>
+                <a href="Experiencia.html">Experiencia</a>
+                <a href="Contato.html">Contato</a>
+            </nav>
+        </header>
+
+        <section>
+
+            <div class="certificados">
+
+                <button id="anterior" class="anterior">Voltar</button>
+
+                <img
+                    id="certificado"
+                    class="certificado-img"
+                    src="Styles/Certificado1.png"
+                    alt="Certificado"
+                >
+
+                <button id="proximo" class="proximo">Proximo</button>
+
+            </div>
+
+        </section>
+
+
+        <script>
+
+            const certificados = [
+                "Styles/Certificado1.png",
+                "Styles/Certificado2.png",
+                "Styles/Certificado3.png"
+            ];
+
+            let atual = 0;
+
+
+            const imagem = document.getElementById("certificado");
+            const anterior = document.getElementById("anterior");
+            const proximo = document.getElementById("proximo");
+
+
+            proximo.addEventListener("click", () => {
+
+                atual++;
+
+                if (atual >= certificados.length) {
+                    atual = 0;
+                }
+
+                imagem.src = certificados[atual];
+
+            });
+
+
+            anterior.addEventListener("click", () => {
+
+                atual--;
+
+                if (atual < 0) {
+                    atual = certificados.length - 1;
+                }
+
+                imagem.src = certificados[atual];
+
+            });
+
+        </script>
+
+    </body>
+
+</html>

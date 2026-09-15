@@ -1,0 +1,184 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 2rem 5%;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+}
+
+
+.logo {
+    font-size: 4rem;
+    color: red;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #8d0c0c;
+    border-bottom: 3px solid #e96a6a;
+}
+
+
+
+.contato {
+    padding-top: 13rem;
+    margin-left: 8rem;
+}
+
+.Email,
+.Telefone {
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+
+
+.contato i {
+    margin-right: 3rem;
+}
+
+
+
+.social-icons {
+    display: flex;
+    padding: 7rem;
+    margin-left: 8rem;
+    gap: 10rem;
+    
+}
+
+.social-icons a {
+    width: 12rem;
+    height: 6rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    border: 2px transparent rgb(82, 82, 163);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.2) translateY(-5px);
+    background-color: #1f2cdb;
+    box-shadow: 0 0 25px #2d2add;
+}
+
+
+.home{
+
+    padding: 10rem;
+    margin: 5rem;
+}
+
+
+
+
+
+
+@media (max-width: 990px) {
+
+    header {
+        padding: 2rem 5%;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 40%;
+
+        padding: 1rem;
+
+        background-color: #161616;
+
+        border-left: 3px solid #e05b5b;
+        border-bottom: 3px solid #c55a5a;
+        border-bottom-left-radius: 2rem;
+    }
+
+    nav a {
+        display: block;
+
+        font-size: 2.5rem;
+
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+
+        border-radius: 0.5rem;
+
+        border-bottom: 0.5rem solid #973535;
+    }
+
+
+
+
+    .contato {
+        margin-left: 4rem;
+    }
+
+    .social-icons {
+        margin-left: 4rem;
+    }
+}
+
